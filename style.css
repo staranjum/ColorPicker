@@ -1,0 +1,41 @@
+
+#box-color{ 
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100%;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.code{
+    padding:.5rem;
+    border: 1px solid #ddd;
+    border-left: 1.5rem solid #ddd;
+    border-radius: .2rem;
+}   
+
+#random-box-color{
+    height: 8rem;
+    border: 1px solid #ddd;
+    border-radius: .5rem;
+}
+.canvas{
+    width: 20rem;
+    height: 12rem;
+    border: 1px solid #ddd;
+    border-radius: .2rem;
+    text-align: center;
+}
+
+.canvas-control{
+  height: 12rem;
+}
+
+h4{
+    margin-top: 4rem;
+}
+
+
