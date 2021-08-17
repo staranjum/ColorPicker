@@ -38,6 +38,7 @@ function main() {
 			const randomBox = document.getElementById('random-box-color');
 			const rgb = randomColorGenaretor();
 			randomBox.style.background = rgbStringGenerator(rgb);
+			randomBox.innerText = '';
 			checkColorType(rgb);
 		});
 
@@ -48,6 +49,7 @@ function main() {
 
 	let hexColor = '#fff';
 	hexToRGBConverter(hexColor);
+	handleSlider();
 }
 
 function randomColorGenaretor() {
@@ -106,6 +108,14 @@ function rgbToHexConverter(color) {
 	return `#${r.toString(16)}${g.toString(16)}${b.toString(16)}`;
 }
 
+function rgbaStringGenerator(color) {
+	let r = color[0];
+	let g = color[1];
+	let b = color[2];
+	let a = color[3];
+	return `rgba(${r},${g},${b},${a})`;
+}
+
 function rgbStringGenerator(color) {
 	let r = color[0];
 	let g = color[1];
@@ -131,5 +141,19 @@ function hexToRGBConverter(hex) {
 		const g = parseInt(`${hex[1]}${hex[1]}`, 16);
 		const b = parseInt(`${hex[2]}${hex[2]}`, 16);
 		console.log(r, g, b);
+	}
+}
+
+function handleSlider() {
+	const sliders = document.getElementsByClassName('slider-item');
+	for (let i = 0; i < sliders.length; i++) {
+		sliders[i].addEventListener('input', function (e) {
+			const red = document.getElementById('red').value;
+			const green = document.getElementById('green').value;
+			const blue = document.getElementById('blue').value;
+			const output = document.getElementById('output-color');
+			const rgbString = rgbStringGenerator([red, green, blue]);
+			output.style.background = rgbString;
+		});
 	}
 }

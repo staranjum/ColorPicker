@@ -41,7 +41,8 @@
                 </div>
 
                 <div class="row center pt-5">
-                    <div class="col-8" name="random-box-color" id="random-box-color"></div>
+                    <div class="col-8 center" name="random-box-color" id="random-box-color">Click to Genarate Random
+                        Color</div>
                 </div>
             </div>
 
@@ -71,22 +72,28 @@
                     <div class="col-8 canvas" id="canvas">
                         <h4 id="canvas-text">Color Combination</h4>
                     </div>
-                    <div class="col-4 canvas-control">
-                        <div><button type="button" class="btn btn-primary" id="bg-btn">Genaret
-                                Background</button></div>
-                        <div class="mt-3"></div><button type="button" class="btn btn-primary" id="txt-btn">Genaret
+                    <div class="col-4 center gap-2 center text-center mt-2">
+                        <button type="button" class="btn btn-primary" id="bg-btn">Genaret
+                            Background</button>
+                        <button type="button" class="btn btn-primary" id="txt-btn">Genaret
                             Forground</button>
-                        <div class="mt-3"><button type="button" class="btn btn-dark" id="reset-btn">Reset</button></div>
-
+                        <button type="button" class="btn btn-dark" id="reset-btn">Reset</button>
                     </div>
-
                 </div>
             </div>
 
+            <div class="slider-wrapper">
+                <div class="output-color" id="output-color"></div>
+                <div class="slider">
+                    <input class="slider-item slider-item-red" type="range" min="1" max="255" value="0" name="red"
+                        id="red">
+                    <input class="slider-item slider-item-green" type="range" min="1" max="255" value="0" name="green"
+                        id="green">
+                    <input class="slider-item slider-item-blue" type="range" min="1" max="255" value="0" name="blue"
+                        id="blue">
+                </div>
+            </div>
         </div>
-
-
-
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
